@@ -23,9 +23,7 @@ npx -y mcp-hydrocoder-vision
 
 ### 2. 配置 Claude
 
-#### 方式一：Claude Desktop（ graphical 界面）
-
-打开 Claude Desktop，进入 **Settings** → **Developer** → **Edit Settings**，将以下配置添加到 `~/.claude/settings.json`（或 `~/.claude.json`）中：
+编辑用户目录下的 `~/.claude.json` 文件，添加以下配置：
 
 ```json
 {
@@ -41,22 +39,6 @@ npx -y mcp-hydrocoder-vision
   }
 }
 ```
-
-#### 方式二：Claude 命令行
-
-在终端中运行以下命令：
-
-```bash
-claude --editing --settings '{"mcpServers":{"hydrocoder-vision":{"command":"npx","args":["-y","mcp-hydrocoder-vision"],"env":{"LM_STUDIO_URL":"http://localhost:1234/v1/chat/completions","VISION_MODEL":"Qwen3-VL-4B-Instruct"}}}}'
-```
-
-如果需要指定配置文件路径：
-
-```bash
-claude --editing --settings-file ~/.claude/settings.json
-```
-
-然后手动将配置内容添加到文件中。
 
 ### 3. 启动 LM Studio
 

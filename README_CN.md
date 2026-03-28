@@ -18,14 +18,22 @@
 
 ## 安装步骤
 
+### 1. 克隆仓库
+
 ```bash
-# 进入项目目录
-cd C:\workspace\develop\ccExtensions\mcpHydroVision
+git clone https://github.com/hydroCoderClaud/mcp-hydrocoder-vision.git
+cd mcp-hydrocoder-vision
+```
 
-# 安装依赖
+### 2. 安装依赖
+
+```bash
 npm install
+```
 
-# 构建项目
+### 3. 构建项目
+
+```bash
 npm run build
 ```
 
@@ -45,8 +53,8 @@ npm run build
 {
   "mcpServers": {
     "hydrocoder-vision": {
-      "command": "node",
-      "args": ["C:/workspace/develop/ccExtensions/mcpHydroVision/dist/index.js"],
+      "command": "npx",
+      "args": ["-y", "mcp-hydrocoder-vision"],
       "env": {
         "LM_STUDIO_URL": "http://localhost:1234/v1/chat/completions",
         "VISION_MODEL": "Qwen3-VL-4B-Instruct"

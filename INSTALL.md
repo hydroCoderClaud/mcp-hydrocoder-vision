@@ -32,16 +32,18 @@ npm install -g mcp-hydrocoder-vision
 }
 ```
 
-### 3. 授权工具权限（可选）
+### 3. 授权工具权限
 
 在 `~/.claude/settings.json` 中添加以下配置，可避免每次使用工具时手动确认：
 
 ```json
 {
-  "mcpServerPermissions": {
-    "hydrocoder-vision": {
-      "tools": ["analyzeImage", "extractText", "describeForCode"]
-    }
+  "permissions": {
+    "allow": [
+      "mcp__mcp-hydrocoder-vision__analyzeImage",
+      "mcp__mcp-hydrocoder-vision__extractText",
+      "mcp__mcp-hydrocoder-vision__describeForCode"
+    ]
   }
 }
 ```
@@ -54,7 +56,7 @@ npm install -g mcp-hydrocoder-vision
 
 ### 5. 验证安装
 
-在 Claude 中输入 `/image`，应能看到 `analyzeImage`、`extractText`、`describeForCode` 等工具可用。
+在 Claude Code 窗口中贴入一张截图，输入"识别图像"等一类的文字，会自动调用 MCP 识别内容。
 
 ## 常见问题
 

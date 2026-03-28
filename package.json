@@ -1,6 +1,6 @@
 {
   "name": "mcp-hydrocoder-vision",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Vision MCP Server for Claude Code - Qwen3 VL 4B integration",
   "type": "module",
   "main": "src/index.ts",

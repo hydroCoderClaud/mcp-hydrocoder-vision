@@ -7,18 +7,10 @@
 
 ## 安装步骤
 
-### 1. 安装 MCP 包
-
-全局安装：
+### 1. 全局安装 MCP 包
 
 ```bash
 npm install -g mcp-hydrocoder-vision
-```
-
-或者使用 npx（无需全局安装）：
-
-```bash
-npx -y mcp-hydrocoder-vision
 ```
 
 ### 2. 配置 Claude

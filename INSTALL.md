@@ -32,13 +32,27 @@ npm install -g mcp-hydrocoder-vision
 }
 ```
 
-### 3. 启动 LM Studio
+### 3. 授权工具权限（可选）
+
+在 `~/.claude/settings.json` 中添加以下配置，可避免每次使用工具时手动确认：
+
+```json
+{
+  "mcpServerPermissions": {
+    "hydrocoder-vision": {
+      "tools": ["analyzeImage", "extractText", "describeForCode"]
+    }
+  }
+}
+```
+
+### 4. 启动 LM Studio
 
 1. 打开 LM Studio
 2. 下载并加载 `Qwen3-VL-4B-Instruct` 模型
 3. 启动本地服务器（默认端口：1234）
 
-### 4. 验证安装
+### 5. 验证安装
 
 在 Claude 中输入 `/image`，应能看到 `analyzeImage`、`extractText`、`describeForCode` 等工具可用。
 

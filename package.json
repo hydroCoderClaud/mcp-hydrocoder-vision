@@ -1,0 +1,39 @@
+{
+  "name": "mcp-hydrocoder-vision",
+  "version": "0.1.0",
+  "description": "Vision MCP Server for Claude Code - Qwen3 VL 4B integration",
+  "type": "module",
+  "main": "src/index.ts",
+  "bin": {
+    "mcp-hydrocoder-vision": "./src/index.ts"
+  },
+  "files": [
+    "src/",
+    "README.md",
+    "README_CN.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts"
+  },
+  "keywords": [
+    "mcp",
+    "vision",
+    "image",
+    "claude",
+    "qwen"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.1",
+    "tsx": "^4.7.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.3"
+  }
+}

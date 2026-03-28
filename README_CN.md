@@ -1,5 +1,7 @@
 # MCP HydroCoder Vision
 
+[English Installation](./INSTALL_.md) | [中文安装](./INSTALL_CN.md) | [English README](./README.md)
+
 基于 **Qwen3 VL 4B** 模型的本地视觉语言 MCP 服务器，让 Claude Code 能够识别和分析图像。
 
 ## 功能特性

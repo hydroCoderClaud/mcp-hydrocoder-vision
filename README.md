@@ -1,5 +1,7 @@
 # MCP HydroCoder Vision
 
+[English Installation](./INSTALL_.md) | [中文安装](./INSTALL_CN.md) | [中文 README](./README_CN.md)
+
 A vision-language MCP server that enables Claude Code to analyze images using **Qwen3 VL 4B** model running locally via LM Studio.
 
 ## Features

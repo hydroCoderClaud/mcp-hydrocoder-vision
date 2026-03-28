@@ -1,5 +1,7 @@
 # Installation Guide
 
+[中文版](./INSTALL_CN.md) | [English README](./README.md) | [中文 README](./README_CN.md)
+
 ## Prerequisites
 
 - Node.js 18+ installed

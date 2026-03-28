@@ -1,5 +1,7 @@
 # 安装说明
 
+[English Version](./INSTALL_.md) | [英文 README](./README.md) | [中文 README](./README_CN.md)
+
 ## 前置要求
 
 - Node.js 18+ 已安装

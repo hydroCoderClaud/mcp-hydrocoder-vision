@@ -160,7 +160,8 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         const validated = AnalyzeImageInputSchema.parse(args);
         const mimeType = getMimeType(validated.imagePath);
         const imageData = await fileToBase64(validated.imagePath);
-        const prompt = validated.prompt || 'Describe this image in detail.';
+        const prompt = validated.prompt ||
+          'Describe all visible elements concisely. Use factual, structured language. Include colors, sizes, positions, and relationships between elements. No fluff. Assume the image is a static screenshot or photograph.';
 
         const result = await analyzeImageWithLMStudio(imageData, mimeType, prompt);
         return {
@@ -173,8 +174,8 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         const mimeType = getMimeType(validated.imagePath);
         const imageData = await fileToBase64(validated.imagePath);
         const prompt = validated.language
-          ? `Extract all text from this image. The text is in ${validated.language}.`
-          : 'Extract all text from this image (OCR).';
+          ? `Extract ALL visible text in ${validated.language}. Output only the text, no commentary. Return text in the order it appears.`
+          : `Extract ALL visible text. Output only the text, no commentary. Return text in the order it appears.`;
 
         const result = await analyzeImageWithLMStudio(imageData, mimeType, prompt);
         return {
@@ -187,7 +188,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         const mimeType = getMimeType(validated.imagePath);
         const imageData = await fileToBase64(validated.imagePath);
         const framework = validated.framework || 'HTML/CSS/JavaScript';
-        const prompt = `Analyze this UI/design image and generate ${framework} code that replicates it. Focus on structure, styling, and layout.`;
+        const prompt = `Generate ${framework} code matching this design. Include all clickable elements, form submissions, state changes, and dynamic interactions. Use standard practices. Keep code readable and maintainable. Omit unnecessary comments. Do not output code for unsupported frameworks. Output only the code.`;
 
         const result = await analyzeImageWithLMStudio(imageData, mimeType, prompt);
         return {
